@@ -1,4 +1,4 @@
-package P_0501;
+/package P_0501;
 
 public class Study05 {
 	private String name;

@@ -7,13 +7,9 @@ public class Human1 {
  private int weight;
  private Study02 birthday;
  //필드를 프라이빗으로 설정 그후 겟 명령어를 입력해서 값을 입력받음
- 
- 
- 
  	public String getName() {
 	return name;
  }
-
  	public Human1(String name, int height, int weight, Study02 birthday) {
 	super();
 	this.name = name;
@@ -53,7 +49,9 @@ public class Human1 {
 	}
 
 	public String toString() {
-		return "{"+name+":"+height+"cm"+weight+"kg"+birthday+"출생}";
+		 // 문자열을여러개를 리턴하는 메소드
+
+		 return "{"+name+":"+height+"cm"+weight+"kg"+birthday+"출생}";
 	}
 
 }

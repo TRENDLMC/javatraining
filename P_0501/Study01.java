@@ -6,9 +6,9 @@ public class Study01 {
 	
 	static void printHumanArray(Human[] a) {
 		for (int i = 0; i < a.length; i++) {
-			System.out.printf("NO.%d %s %3dcm %3dkg\n",i,a[i].getName(),a[i].getHeight(),a[i].getWeight());
+			System.out.printf("NO.%d %s %3dcm %3dkg\n", i, a[i].getName(), a[i].getHeight(), a[i].getWeight());
+			// no 정수 문자열 실수 cm 정수
 		}
-		
 	}
 	
 	public static void main(String[] args) {
