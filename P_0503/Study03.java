@@ -1,37 +1,65 @@
+package P_0503;
+
 import java.util.GregorianCalendar;
-import java.util.Random;
 
 public class Study03 {
+	private static int counter=0;
+	private static int day;
+	
+	private int x=0;
+	private int y=0;
+	
+	static{
+		GregorianCalendar today=new GregorianCalendar();
+		day=today.get(day);
+	}
+	
+	{if(--counter==day) {
+		System.out.print("당첨!!");
+		System.out.printf("오늘 %d개의 좌표가 생성했습니다\n",counter);
+		}
+	}
+	
+	public Study03() {
+		if(++counter==day) {
+			System.out.print("당첨!!");
+			System.out.printf("오늘 %d개의 좌표가생성됐습니다.\n",counter);
+		}
+	}
+	public Study03(int x) {
+		if(++counter==day) {
+			System.out.print("당첨!!");
+			System.out.printf("오늘 %d개의 좌표가생성됐습니다.\n",counter);
+		}
+		this.x=x;
+	}
+	public Study03(int x,int y) {
+		if(++counter==day) {
+			System.out.print("당첨!!");
+			System.out.printf("오늘 %d개의 좌표가생성됐습니다.\n",counter);
+		}
+		this.x=x;
+		this.y=y;
+	}
+	
+	public int getY() {
+		return y;
+	}
+	public int getX() {
+		return x;
+	}
+	public static int getCounter() {return counter;}
+	@Override
+	public String toString() {
+		return "("+x+","+y+")";
+	}
+	
+	
 
-    public static void main(String[] args) {
-        GregorianCalendar today= new GregorianCalendar();
-        
-        int y=today.get(GregorianCalendar.YEAR);
-        int m=today.get(GregorianCalendar.MONTH)+1;
-        int d=today.get(GregorianCalendar.DATE);
-        System.out.printf("오늘은 %04d년%02d월%02d일입니다.\n",y,m,d);
-        
-        Random rand=new Random();
-        
-        int k=rand.nextInt(10);
-        System.out.print("오늘의운세는");
-        switch (k){
-            case 0:
-                System.out.print("대길"); break;
-            case 1:
-            case 2:
-            case 3:
-                System.out.print("길");break;
-            case 4:
-            case 5:
-            case 6:
-                System.out.print("중길");break;
-            case 7:
-            case 8:
-                System.out.print("소길");break;
-            case 9:
-                System.out.print("흉");break;
-        }
-        System.out.println("입니다");
-    }
+	
+	
+	
+	
+	
+
 }

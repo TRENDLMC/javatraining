@@ -1,8 +1,9 @@
-package P_0503;
+package P_0504;
 
+import P_0503.Day;
 
-public class Study05 {
-	private static int counter=0;
+public class Account {
+private static int counter=0;
 	
 	private String name;
 	private String no;
@@ -15,12 +16,17 @@ public class Study05 {
 		System.out.println("은행계좌를 개설해주셔서 감사합니다");
 	}
 	
-	public Study05(String name,String no) {
+	public  Account(String name,String no) {
 		this(name,no,0,new Day());
 		
 	}
+	public Account(String name, String no, long balance) {
+		this.name=name;
+		this.no=no;
+		this.balance=balance;
+	}
 
-	public Study05(String name, String no, long balance,Day openday) {
+	public Account(String name, String no, long balance,Day openday) {
 		this.name=name;
 		this.no=no;
 		this.balance=balance;
